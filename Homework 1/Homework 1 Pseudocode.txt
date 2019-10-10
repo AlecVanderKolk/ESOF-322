@@ -1,0 +1,53 @@
+public class Company{
+	private String[1] name;
+	private Address[1] headquarters;
+}
+public abstract class Vehicle implements IRentable{
+	...
+}
+public class Truck extends Vehicle{
+	private UnlimitedNatural[1] weight;
+	private UnlimitedNatural[1] power;
+	private String[1] manufacturer;
+	private String[1] regNo;
+}
+public interface IRentable{
+	public Boolean rent(){...};
+}
+public class Car extends Vehicle{
+	private CarKind[1] kind;
+	private UnlimitedNatural[1] noSeats;
+	private UnlimitedNatural[1] power;
+	private String[1] manufacturer;
+	private String[1] regNo;
+}
+public class Motorbike extends Vehicle{
+	private MbKind[1] kind;
+	private UnlimitedNatural[1] cylinderCap;
+	private UnlimitedNatural[1] power;
+	private String[1] manufacturer;
+	private String[1] regNo;
+}
+public abstract class Service{
+	private Customer[1] customer;
+}
+public class VehicleRentalService extends Service{
+	private Vehicle[1] vehicle;
+	public Car offerCar(){...};
+	public Motorbike offerMotorbike(){...}; 
+	public Truck offerTruck(){...};
+}
+public abstract class Person{
+	private String[1] name;
+	private String[1] email;
+}
+public class Address{
+	private String[1] street;
+	private String[1] postalCode;
+	private String[1] city;
+}
+public class bankAccount{
+	private UnlimitedNatural[1] number;
+	private String[1] depositor;
+	private String[1] bank;
+}
